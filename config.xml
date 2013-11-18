@@ -107,6 +107,7 @@
 
         Otherwise, you can specify specific domains:
     -->
+  
 
     <access origin="*"/>
     <!-- allow local pages -->
