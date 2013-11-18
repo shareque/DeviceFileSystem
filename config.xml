@@ -63,6 +63,8 @@
 
     <!-- Plugins can also be added here. -->
     <plugin name="Notification" value="org.apache.cordova.Notification"/>
+    <plugin name="File" value="org.apache.cordova.FileUtils" />
+    <plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" />
 
   <!--
         <gap:plugin name="Example" />
@@ -105,7 +107,6 @@
 
         Otherwise, you can specify specific domains:
     -->
-  <plugin name="Notification" value="org.apache.cordova.Notification"/>
 
     <access origin="*"/>
     <!-- allow local pages -->
