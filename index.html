@@ -64,24 +64,6 @@
     </div>
 </body>
 <script>
-    function onPrompt(results) {
-        var result = results.buttonIndex;
-        if (result) {
-            navigator.app.exitApp();
-        }
-        else
-            return false;
-    }
-
-    function exitFromApp() {
-        navigator.notification.confirm(
-            'Do you want to Exit? ',  // message
-            onPrompt,                  // callback to invoke
-            'Application Exit',            // title
-             ['Exit', 'Cancel']            // buttonLabels
-        // 'Application Exit'         // defaultText
-        );
-    }
     var FILENAME = 'database.db',
 $ = function (id) {
     return document.getElementById(id);
