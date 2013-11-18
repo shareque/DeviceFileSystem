@@ -14,6 +14,24 @@
     <script src="assets/js/nativedroid.script.js" type="text/javascript"></script>
     <script src="phonegap.js" type="text/javascript"></script>
     <script>
+        function onPrompt(results) {
+            var result = results.buttonIndex;
+            if (result) {
+                navigator.app.exitApp();
+            }
+            else
+                return false;
+        }
+
+        function exitFromApp() {
+            navigator.notification.confirm(
+            'Do you want to Exit? ',  // message
+            onPrompt,                  // callback to invoke
+            'Application Exit',            // title
+             ['Exit', 'Cancel']            // buttonLabels
+            // 'Application Exit'         // defaultText
+        );
+        }
         var FILENAME = 'database.db',
 $ = function (id) {
     return document.getElementById(id);
@@ -99,7 +117,7 @@ fail;
     <div data-role="page" data-theme='b' id="pgIndex">
         <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
             <h1>
-                First Mobile App</h1>
+                File System App</h1>
             <a href="index.html" data-ajax="false"><i class='icon-home'></i></a>
         </div>
         <div data-role="content">
@@ -120,7 +138,7 @@ fail;
         </div>
         <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme='b'>
             <h1>
-                First Mobile App</h1>
+                ITBEES Technologies</h1>
         </div>
     </div>
 </body>
